@@ -13,7 +13,7 @@ const START_DATE = new Date(process.env.START_DATE);
 client.once('ready', () => {
     console.log(`✅ Bot is online:): ${client.user.tag}`);
 
-    cron.schedule('*/1 * * * *', async () => {  
+    cron.schedule('15 7 * * *', async () => {  
         const today = new Date();
         const diffTime = today - START_DATE;
         const dayCount = Math.floor(diffTime / (1000 * 60 * 60 * 24));
